@@ -1,3 +1,31 @@
+// [jwc] 
+// *** IMPORTANT: Though the 'sample-stripe-handler' repo has been attached to MS-Azure:VueJs-ShopStripe-SandrasD,
+// * unfortunately,  'MS-Azure:stripe-handler:index.js' fails to be connected to ('Error 401 Unauthorization').
+// * Yet, index.js from 'MS-Azure:HttpTriggerJS1:index.js' succeeds.  
+// * Maybe because only the first Function as a Service (FAAS) is active?
+// *** Yet, the 'sample-stripe-handler' repo provides the 'node_modules' needed for 'MS-Azure:HttpTriggerJS1:index.js' to work finally. AHG.
+// 
+
+
+// [jwc]>> Following Archived from 'MsAzure:VueJs-ShopStripe-SandrasD'
+//
+
+// <script src="https://js.stripe.com/v3/"></script>
+
+// [jwc]+1 orig: var stripe = require('stripe')('sk_test_js5LRkmS7OsYHtVc7XYvK9OB');
+// [jwc]Y AHG Fixed after included repo from GitHub: var stripe = require('stripe')('sk_test_NhYGHM4AS0f4qmPaxknfR9fU');
+
+//[jwc]+x Test Sample works:
+// {
+//     stripeEmail: "jasonc@eande.world"  // email can/should be anything
+//     stripeToken: "tok_visa"
+//     stripeAmt: "50.00"
+// }
+
+//
+// [jwc]<< Following Archived from 'MsAzure:VueJs-ShopStripe-SandrasD'
+
+
 // [jwc]+1 orig: var stripe = require('stripe')('sk_test_js5LRkmS7OsYHtVc7XYvK9OB');
 var stripe = require('stripe')('sk_test_NhYGHM4AS0f4qmPaxknfR9fU');
 // ^ this is a stripe testing key
